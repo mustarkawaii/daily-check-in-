@@ -10,4 +10,7 @@ jobs:
     - name: running...
       shell: python
       working-directory: ./resource
-      run: daily_resetBook.py
+      run: import sys 
+           sys.path.append(./resource) 
+           from daily_resetBook.py import *   
+           

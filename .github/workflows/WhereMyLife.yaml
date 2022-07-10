@@ -3,7 +3,7 @@ on:
     schedule:
       - cron:  '00 14 * * *'
 jobs:
-  WhereMyLife签到:
+  WhereMyLife:
     name: WhereMyLife签到
     runs-on: macos-10.15
     steps:

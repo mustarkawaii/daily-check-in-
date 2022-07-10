@@ -1,0 +1,13 @@
+name: WhereMyLife签到
+on:
+    schedule:
+      - cron:  '00 14 * * *'
+jobs:
+  WhereMyLife签到:
+    name: WhereMyLife签到
+    runs-on: macos-10.15
+    steps:
+    - name: running...
+      shell: python
+      working-directory: ./resource
+      run: daily_resetBook.py

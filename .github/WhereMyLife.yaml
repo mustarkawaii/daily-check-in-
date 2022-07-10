@@ -1,7 +1,7 @@
 name: WhereMyLife签到
 on:
     schedule:
-        -cron:jobs:
+      - cron:  '00 14 * * *'
 jobs:
   WhereMyLife签到:
     name: WhereMyLife签到

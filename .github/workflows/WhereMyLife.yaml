@@ -1,16 +1,21 @@
 name: WhereMyLife签到
 on:
-    schedule:
-      - cron:  '00 14 * * *'
+  workflow_dispatch:
+  schedule:
+    # IMPORTANT: Set cron job in UTC timezone
+    - cron:  '15 23 * * *'
+    
 jobs:
-  WhereMyLife:
-    name: WhereMyLife签到
-    runs-on: macos-10.15
+  run-python-script:
+    runs-on: ubuntu-latest
     steps:
-    - name: running...
-      shell: python
-      working-directory: ./resource
-      run: import sys 
-           sys.path.append(./resource) 
-           from daily_resetBook.py import *   
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.0'
+      - run: pip install requests
+      - run: python resource/daily_resetBook.py
            
+
+
+      

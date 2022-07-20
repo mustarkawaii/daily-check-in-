@@ -29,23 +29,8 @@ if message==True:
     day=14
 else:
     re_try_time=1
-    result="WhereMyLife打卡失败，原因是【" + x.text  + "】。我们将在1分钟后再次尝试"
-    re_try_time=1
-    
-
- 
-
-while re_try_time==1:  
-    x=requests.post(url, headers=headers, json=a,timeout=2.50)
-    check_in_result=str(x.text)
-    message="success" in  check_in_result
-    if message==True:
-        result="WhereMyLife打卡成功！剩余重置天数为" + str(14) + "天"
-    else:
-        
-        result="WhereMyLife打卡失败，原因是【" + x.text  + "】且再次尝试仍失败，请检查登陆cookies后再试" 
-        
-
+    result="WhereMyLife打卡失败，原因是【" + x.text  + "】"
+    re_try_time=1        
 print(result)
 
 

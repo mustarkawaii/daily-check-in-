@@ -30,7 +30,6 @@ WhereMyLife_day_url='http://wheremylife.cn/1.0/user/book'
 day=requests.get(url=WhereMyLife_day_url, headers=WhereMyLife_headers, json=WhereMyLife_json,timeout=2.50)
 WhereMyLife_day=str(day.text)
 WhereMyLife_day=WhereMyLife_day[9:11]
-print(WhereMyLife_day)
 
 if WhereMyLife_message==True:
    WhereMyLife_result="WhereMyLife打卡成功！剩余重置天数为" + str(14) + "天"
@@ -44,3 +43,4 @@ time.sleep(3)
 print("即将开始每日【gtloli】的签到...")
 time.sleep(3)
 print("暂未开放！")
+time.sleep(3)

@@ -15,6 +15,7 @@ jobs:
           python-version: '3.8.0'
       - run: pip install requests
       - run: pip install bs4
+      - run: pip install pusher
       - run: python resource/daily_resetBook.py
            
 

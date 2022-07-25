@@ -54,7 +54,7 @@ time.sleep(5)
 gtloli_check_in_result=str(y.text)
 
 gtloli_message="已签到" in  gtloli_check_in_result or "签到成功" in  gtloli_check_in_result or "今日已签" in  gtloli_check_in_result
-
+print(gtloli_check_in_result)
 if gtloli_message==True:
     gtloli_result="gtloli签到成功！"
 else:

@@ -1,3 +1,4 @@
+#-*-coding:utf-8-*-
 from operator import truediv
 from tkinter import N
 import requests

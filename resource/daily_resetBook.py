@@ -67,7 +67,7 @@ gtloli_check_in_result=y.status_code
 if gtloli_check_in_result==200:
     gtloli_result="gtloli签到成功！"
 else:
-    gtloli_result="gtloli莫名奇妙签到失败了 " + "HTTP错误代号【"  + gtloli_check_in_result + "】"
+    gtloli_result="gtloli莫名奇妙签到失败了 " + "HTTP错误代号【"  + str(gtloli_check_in_result) + "】"
 time.sleep(5)
 print(gtloli_result)
 

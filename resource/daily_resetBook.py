@@ -33,7 +33,7 @@ WhereMyLife_check_in_result=str(x.text)
 WhereMyLife_message="success" in  WhereMyLife_check_in_result
 
 WhereMyLife_day_url='http://wheremylife.cn/1.0/user/book'
-day=requests.get(url=WhereMyLife_day_url, headers=WhereMyLife_headers, json=WhereMyLife_json,timeout=2.50)
+day=requests.get(url=WhereMyLife_day_url, headers=WhereMyLife_headers, json=WhereMyLife_json,timeout=5)
 WhereMyLife_day=str(day.text)
 WhereMyLife_day=WhereMyLife_day[9:11]
 
